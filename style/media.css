@@ -1,0 +1,156 @@
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .header::after {
+        background: none;
+    }
+
+    .header__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__logo {
+        width: 425px;
+    }
+
+    .header__top-title {
+        max-width: none;
+        text-align: center;
+    }
+
+    .header__list-title {
+        text-align: center;
+    }
+
+    .header__mid-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .workshop__img img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .team__img {
+        max-width: none;
+    }
+
+    .advantages__list {
+        justify-content: center;
+    }
+
+    .advantages__list-item {
+        min-width: unset;
+        max-width: 350px;
+    }
+
+    .stages__list-item {
+        min-width: unset;
+        max-width: 350px;
+    }
+}
+
+@media (max-width:767px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header__top {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header__logo {
+        width: 200px;
+        margin: 0;
+    }
+
+    .header__top-mail {
+        font-size: 20px;
+    }
+
+    .header__mid {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .header__list-title {
+        font-size: 36px;
+    }
+
+    .header__mid a {
+        order: 2;
+    }
+
+    .header__mid-btn {
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .header__top-title {
+        font-size: 20px;
+    }
+
+    .production__list-item {
+        height: unset;
+        margin-right: 0;
+    }
+
+    .production__list-item-text {
+        font-size: 20px;
+    }
+
+    .workshop__desc {
+        font-size: 20px;
+    }
+
+    .workshop__img img {
+        margin-right: 0;
+        max-height: 300px;
+    }
+
+    .team__desc {
+        font-size: 20px;
+    }
+
+    .team__img {
+        height: 300px;
+    }
+
+    .advantages__list {
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .advantages__list-desc {
+        text-align: center;
+        max-width: none;
+    }
+
+    .advantages__list-item {
+        align-items: center;
+    }
+
+    .stages__list {
+        margin-top: 0;
+    }
+
+    .stages__list-item {
+        margin-bottom: 30px;
+    }
+
+    .stages__list-desc {
+        max-width: none;
+    }
+
+    .feedback__btn {
+        width: 100%;
+    }
+}
