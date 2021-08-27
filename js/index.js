@@ -23,3 +23,5 @@ window.addEventListener('DOMContentLoaded', () => {
         form.reset();
     })
 })
+
+// http://design.originweb.info/articles_html/multipages_sites.html
