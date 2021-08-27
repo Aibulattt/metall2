@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
+    <link rel="stylesheet" href="./style/loader.css">
+    <script src="./js/index.js" defer></script>
     <title>Спб-Металл</title>
 </head>
 <body>
@@ -25,7 +27,7 @@
                         <li class="header__mid-list-item"><p class="header__list-title">Модульные здания</p></li>
                     </ul>
                     <a href="#form">
-                        <button class="header__mid-btn">
+                        <button class="header__mid-btn btn-animate">
                             оформить заказ
                         </button>
                     </a>
@@ -61,7 +63,7 @@
         <section class="workshop">
             <div class="container">
                 <h2 class="workshop__title section-title">Современные цеха</h2>
-                <p class="workshop__desc">Общая площадь цехов, оснащенная современным оборудованием составляет более 3000 квадратных метров</p>
+                <p class="workshop__desc section-desc">Общая площадь цехов, оснащенная современным оборудованием составляет более 3000 квадратных метров</p>
                 <!-- <p class="workshop__desc">Современное оборудование</p> -->
                 <div class="workshop__img">
                     <img src="./img/workshop-3.jpeg" alt="example">
@@ -74,13 +76,13 @@
             <div class="container">
                 <h2 class="team__title section-title">Команда</h2>
                 <div class="team__text-wrapper">
-                    <p class="team__desc">Собственное производство, профессионализм инженерно-технического персонала позволяет получить высококачественную продукцию в кратчайшие сроки. </p>
+                    <p class="team__desc section-desc">Собственное производство, профессионализм инженерно-технического персонала позволяет получить высококачественную продукцию в кратчайшие сроки. </p>
                 </div>
                 <div class="team__img-block">
                     <img width="100%" height="500" class="team__img" src="./img/bg-team.png" alt="example-team">
                     <img width="100%" height="500" class="team__img" src="./img/team-img2.png" alt="example-team">
                 </div>
-                <p class="team__desc">Высокая квалификация нашей команды, многолетний опыт реализации проектов различных масштабов, сотрудничество с проектными организациями, четкая ориентация на потребности рынка позволяют нам предлагать наиболее эффективные и передовые решения.</p>
+                <p class="team__desc section-desc">Высокая квалификация нашей команды, многолетний опыт реализации проектов различных масштабов, сотрудничество с проектными организациями, четкая ориентация на потребности рынка позволяют нам предлагать наиболее эффективные и передовые решения.</p>
             </div>
         </section>
 
@@ -167,11 +169,11 @@
         <section class="feedback" id="form">
             <div class="container">
                 <h2 class="feedback__title section-title">Связаться с нами</h2>
-                <form class="feedback__form"> 
-                    <input class="feedback__inp" placeholder="Имя" type="text">
-                    <input class="feedback__inp" placeholder="E-mail" type="text">
-                    <textarea class="feedback__text" placeholder="Введите сообщение" name="" id=""></textarea>
-                    <button class="feedback__btn">Отправить</button>
+                <form class="feedback__form" autocomplete="on" name="feedback"> 
+                    <input class="feedback__inp" placeholder="Имя" type="text" name="name">
+                    <input class="feedback__inp" placeholder="E-mail" type="text" name="email">
+                    <textarea class="feedback__text" placeholder="Введите сообщение" name="message" id=""></textarea>
+                    <button class="feedback__btn btn-animate" type="submit">Отправить</button>
                 </form>
             </div>
         </section>
@@ -181,6 +183,16 @@
                 <p class="footer__address">Фактическй адрес: 193230, г.Санкт-Петербург наб.Октябрьская д.50, лит.А, пом.257</p>
             </div>
         </footer>
+
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="overlay"></div>
     </main>
 </body>
 </html>

@@ -92,8 +92,34 @@ p {
 
 .container {
     max-width: 1920px;
+    margin: 0 auto;
     padding: 0 50px;
 }
+
+.section-desc {
+    margin: 0 auto;
+    max-width: 1700px;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .5);
+    height: 100%;
+    left: 0;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all .2s ease-in-out;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .header {
     padding-top: 20px;
@@ -178,41 +204,21 @@ p {
     font-family: 'Bebas Neue';
 }
 
-/* .header__mid-btn::after {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 20px;
-    background-image: url('../img/arrow.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    transform: rotate(-90deg);
-    position: absolute;
-    top: 10px;
-    right: 20px;
-} */
-
 .production {
     padding-top: 40px;
     padding-bottom: 50px;
     background-color: rgb(71, 69, 69);
-    /* background-image: url('../img/bg-prod.svg'); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* overflow: hidden; */
     color: #fff;
     position: relative;
 }
 
 .production__list {
-    /* column-count: 2; */
     flex-flow: row wrap;
     justify-content: center;
     max-width: 600px;
     display: flex;
     margin: 0 auto;
     padding-top: 30px;
-    /* border-top: 1px dashed #f24843; */
     list-style: disc;
 }
 
@@ -365,19 +371,18 @@ p {
 .advantages__list {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
-    margin-right: 50px;
+    justify-content: center;
+    /* margin-right: 50px; */
     margin-top: 100px;
 }
 
 .advantages__list-item {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     padding: 15px 10px;
-    min-width: 400px;
-    max-width: 500px;
-    width: 100%;
+    min-width: 456px;
+    /* max-width: 500px; */
+    /* width: 100%; */
     margin-bottom: 30px;
     position: relative;
 }
@@ -400,81 +405,6 @@ p {
     font-family: 'Roboto';
     /* color: #fff; */
 }
-
-/* .advantages__list-item:nth-child(1)::before {
-    content: '';
-    width: 140px;
-    height: 100px;
-    position: absolute;
-    top: -6px;
-    left: -20px;
-    background-image: url('https://metal02.ru/tild3162-3064-4139-b036-663764343031/1367383.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-}
-
-.advantages__list-item:nth-child(2)::before {
-    content: '';
-    width: 130px;
-    height: 100px;
-    position: absolute;
-    top: -12px;
-    left: -20px;
-    background-image: url('https://metal02.ru/tild3661-6531-4230-b831-333634323930/162965.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-}
-
-.advantages__list-item:nth-child(3)::before {
-    content: '';
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: -45px;
-    left: 0;
-    background-image: url('https://metal02.ru/tild6339-3639-4633-a264-373033313039/836883_delivery_512x.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.advantages__list-item:nth-child(4)::before {
-    content: '';
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: -25px;
-    left: 0;
-    background-image: url('	https://metal02.ru/tild3231-3231-4462-a463-326663653065/_.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.advantages__list-item:nth-child(5)::before {
-    content: '';
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: -25px;
-    left: 0;
-    background-image: url('https://metal02.ru/tild3665-6539-4438-b737-366138633533/argon74_icon_263.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.advantages__list-item:nth-child(6)::before {
-    content: '';
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: -35px;
-    left: 0;
-    background-image: url('	https://metal02.ru/tild3535-6334-4836-b630-626536366262/img_546523.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-} */
-
 
 .feedback {
     padding: 30px 0 80px;
@@ -538,12 +468,7 @@ p {
     color: #fff;
 }
 
-@media (max-width: 1360px) {
-    .team__img {
-        max-width: 550px;
-    }
-
-    .workshop__img img {
-        max-width: 350px;
-    }
+.btn-animate:hover {
+    background-color: rgb(248, 3, 3);
+    transition: all .4s ease-in-out;
 }

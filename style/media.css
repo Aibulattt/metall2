@@ -1,3 +1,18 @@
+@media (max-width: 1360px) {
+    .team__img {
+        max-width: 550px;
+    }
+
+    .workshop__img img {
+        max-width: 350px;
+    }
+
+    .advantages__list {
+        justify-content: flex-end;
+        /* margin-right: 50px; */
+    }
+}
+
 @media (max-width: 1024px) {
     .container {
         padding: 0 25px;
