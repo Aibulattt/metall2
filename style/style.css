@@ -192,6 +192,7 @@ p {
 }
 
 .header__mid-btn {
+    display: inline-block;
     margin-top: 80px;
     padding: 15px 65px;
     background-color: #f24843;
@@ -202,6 +203,7 @@ p {
     font-size: 22px;
     font-weight: 700;
     font-family: 'Bebas Neue';
+    text-align: center;
 }
 
 .production {

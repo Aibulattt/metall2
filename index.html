@@ -23,13 +23,11 @@
                 </div>
                 <div class="header__mid">
                     <ul class="header__mid-list">
-                        <li class="header__mid-list-item"><p class="header__list-title">Металлоконструкции</p></li>
-                        <li class="header__mid-list-item"><p class="header__list-title">Модульные здания</p></li>
+                        <li class="header__mid-list-item"><h2 class="header__list-title">Металлоконструкции</h2></li>
+                        <li class="header__mid-list-item"><h2 class="header__list-title">Модульные здания</h2></li>
                     </ul>
-                    <a href="#form">
-                        <button class="header__mid-btn btn-animate">
-                            оформить заказ
-                        </button>
+                    <a class="header__mid-btn btn-animate" href="#form">
+                        оформить заказ
                     </a>
                     <p class="header__top-title">Мы интегрируем собственные и партнёрские возможности и компетенции, проектируем, производим и вводим в эксплуатацию!</p>
                 </div>
@@ -79,8 +77,8 @@
                     <p class="team__desc section-desc">Собственное производство, профессионализм инженерно-технического персонала позволяет получить высококачественную продукцию в кратчайшие сроки. </p>
                 </div>
                 <div class="team__img-block">
-                    <img width="100%" height="500" class="team__img" src="./img/bg-team.png" alt="example-team">
-                    <img width="100%" height="500" class="team__img" src="./img/team-img2.png" alt="example-team">
+                    <img class="team__img" src="./img/bg-team.png" alt="example-team">
+                    <img class="team__img" src="./img/team-img2.png" alt="example-team">
                 </div>
                 <p class="team__desc section-desc">Высокая квалификация нашей команды, многолетний опыт реализации проектов различных масштабов, сотрудничество с проектными организациями, четкая ориентация на потребности рынка позволяют нам предлагать наиболее эффективные и передовые решения.</p>
             </div>
@@ -169,10 +167,10 @@
         <section class="feedback" id="form">
             <div class="container">
                 <h2 class="feedback__title section-title">Связаться с нами</h2>
-                <form class="feedback__form" autocomplete="on" name="feedback"> 
+                <form class="feedback__form" action="mail2.php" method="POST" autocomplete="on" name="feedback"> 
                     <input class="feedback__inp" placeholder="Имя" type="text" name="name">
                     <input class="feedback__inp" placeholder="E-mail" type="text" name="email">
-                    <textarea class="feedback__text" placeholder="Введите сообщение" name="message" id=""></textarea>
+                    <textarea class="feedback__text" placeholder="Введите сообщение" name="message"></textarea>
                     <button class="feedback__btn btn-animate" type="submit">Отправить</button>
                 </form>
             </div>
