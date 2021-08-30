@@ -2,12 +2,12 @@ const nodemailer = require('nodemailer');
 require('dotenv').config()
 
 const transporter = nodemailer.createTransport({
-    host: "smtp.yandex.ru",
-    port: 465,
+    host: " smtp.mail.me.com",
+    port: 587 ,
     secure: true,
     auth: {
-        user: process.env.LOGIN_EMAIL,
-        pass: process.env.PASS_EMAIL
+        user: 'aibulat.urazov@icloud.com',
+        pass: 'Perasperaadastra1987'
     },
 });
 
