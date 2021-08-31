@@ -44,7 +44,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Сообщение с сайта spb-metall';
-    $mail->Body = "<h3>Данные пользоваетеля:</h3> <br> Имя пользователя:  $username,<br>\n email пользователя; $userEmail,<br>\n Сообщение пользователя: $userMessage";
+    $mail->Body = "<h3>Данные пользоваетеля:</h3> <br> Имя пользователя:  $username,<br>\n email пользователя: $userEmail,<br>\n Сообщение пользователя: $userMessage";
     $mail->AltBody = 'Данные пользоваетеля: Имя пользователя:  $username,\n email пользователя; $userEmail,\n Сообщение пользователя: $userMessage';
 
     $mail->send();

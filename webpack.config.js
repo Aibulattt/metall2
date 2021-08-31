@@ -39,7 +39,7 @@ module.exports = {
                 use: ['babel-loader']
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(png|jpg|jpeg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
                     outputPath: 'img',  
@@ -47,14 +47,14 @@ module.exports = {
                 }
             },
             {
-                test: /\.(woff(2)?|eot|ttf|)$/,
+                test: /\.(woff(2)?|ttf|TTF|OTF|eot|)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
                 options: {
                     name: 'fonts/[name].[ext]'
                 }
             },
             {
-                test: /\.(scss|css)$/,
+                test: /\.css$/,
                 use: [
                   MiniCssExtractPlugin.loader,
                     'css-loader',
@@ -63,12 +63,9 @@ module.exports = {
                     options: { sourceMap: true, 
                         postcssOptions: {
                             config: path.resolve(__dirname, "./postcss.config.js"),
-                                     },
+                        },
                     }
-                  }, {
-                    loader: 'sass-loader',
-                    options: { sourceMap: true }
-                  },
+                  }, 
                 ]
             },
         ]
