@@ -1,4 +1,7 @@
 <?php
+
+ini_set('display_errors','On');
+error_reporting('E_ALL');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -8,27 +11,29 @@ require 'PHPMailer/src/SMTP.php';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
+$mail->setLanguage('ru', 'phpmailer/language/');
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+   
+    $mail->SMTPDebug = 2;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host = 'ssl://smtp.postfix.com';                     //Set the SMTP server to send through
+    $mail->Host = 'mail.spb-metall.info';                     //Set the SMTP server to send through
     $mail->SMTPAuth = true;                                   //Enable SMTP authentication
     $mail->Username = 'noreply@spb-metall.info';                     //SMTP username
-    $mail->Password = 'gou86huv@';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port = 465 ;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->Password = 'gou8Ghuv@';                               //SMTP password
+    $mail->SMTPSecure = 'startls';            //Enable implicit TLS encryption
+    $mail->Port = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     $username = $_POST['name'];
-    $userEmail = $_POST['email'];
+    $userEmail = $_REQUEST['email'];
     $userMessage = $_POST['message'];
 
     //Recipients
     $mail->setFrom('noreply@spb-metall.info');
-    $mail->addAddress('office@spb-metall.info');     //Add a recipient
-    // $mail->addAddress('aibulat.urazov@icloud.com');               //Name is optional
-    // $mail->addReplyTo('office@spb-metall.info', 'Information');
+    $mail->addAddress('office@spb-metall.info');     //Add a recipient          
+    $mail->addReplyTo('office@spb-metall.info', 'Information');
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
 
@@ -38,9 +43,9 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = "This is the HTML message body <b>in bold!</b>  Имя пользователя:  $username,\n email пользователя; $userEmail,\n Сообщение пользователя: $userMessage";
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->Subject = 'Сообщение с сайта spb-metall';
+    $mail->Body = "<h3>Данные пользоваетеля:</h3> <br> Имя пользователя:  $username,<br>\n email пользователя; $userEmail,<br>\n Сообщение пользователя: $userMessage";
+    $mail->AltBody = 'Данные пользоваетеля: Имя пользователя:  $username,\n email пользователя; $userEmail,\n Сообщение пользователя: $userMessage';
 
     $mail->send();
     echo 'Message has been sent';
