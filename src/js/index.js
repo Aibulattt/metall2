@@ -1,4 +1,4 @@
-import '../style/style.css';
+// import '../style/style.css';
 
 'use strict'
 
@@ -14,9 +14,13 @@ window.addEventListener('DOMContentLoaded', () => {
         const response = await fetch('mail2.php', {
             method: 'POST',
             body: new FormData(form)
-        });
-        loader.classList.remove('active');
-        overlay.classList.remove('active');
+        })
+        .then(response => {
+            if (response.ok) {
+                loader.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        })
         form.reset();
     })
 })
