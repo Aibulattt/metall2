@@ -1,6 +1,7 @@
 // import '../style/style.css';
 
 'use strict'
+const siteKey = '6Ld9iwwdAAAAADbumcO4fr1Sj1jh3C0VX-H4793V'
 
 window.addEventListener('DOMContentLoaded', () => {
     const form = document.forms.feedback;
@@ -22,6 +23,12 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         })
         form.reset();
+    })
+
+    grecaptcha.ready(function() {
+        grecaptcha.execute(siteKey, {action: 'homepage'}).then(function(token) {    
+            document.getElementById('g-recaptcha-response').value=token;
+        })
     })
 })
 

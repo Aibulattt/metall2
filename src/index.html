@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
     <link rel="stylesheet" href="./style/loader.css">
-    <script src="./js/index.js" defer></script>
     <link rel="preload" href="fonts/roboto-v27-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/roboto-v27-latin_cyrillic-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/roboto-v27-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <script src="./js/index.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld9iwwdAAAAADbumcO4fr1Sj1jh3C0VX-H4793V" defer></script>
     <title>Спб-Металл</title>
 </head>
 <body>
@@ -173,6 +174,7 @@
                 <form class="feedback__form" autocomplete="on" name="feedback"> 
                     <input class="feedback__inp" placeholder="Имя" type="text" name="name">
                     <input class="feedback__inp" placeholder="E-mail" type="text" name="email">
+                    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
                     <textarea class="feedback__text" placeholder="Введите сообщение" name="message"></textarea>
                     <button class="feedback__btn btn-animate" type="submit">Отправить</button>
                 </form>
